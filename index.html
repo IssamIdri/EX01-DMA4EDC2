@@ -95,6 +95,23 @@
             transform: scale(1.05);
         }
 
+        .viz-box {
+            margin: 20px 0;
+        }
+
+        .viz-container {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .viz-container iframe {
+            flex: 1;
+            min-width: 300px;
+            margin: 0;
+        }
+
         footer {
             background: linear-gradient(135deg, #2d3561 0%, #c05c7e 100%);
             color: white;
@@ -126,6 +143,14 @@
 
             iframe {
                 height: 350px;
+            }
+
+            .viz-container {
+                flex-direction: column;
+            }
+
+            .viz-container iframe {
+                min-width: 100%;
             }
         }
 
@@ -163,6 +188,29 @@
             <h2>Plus grandes villes par pays(RawGraphs)</h2>
             <img src="viz.svg" alt="Wikidata Logo" style="width: 80%; height: auto; max-width: 100%;">
         </section>
+
+        <h1>Exercice 2.4 : Visualisations Interactives</h1>
+
+    <section>
+        <h2>1. Visualisation interactive de texte (Voyant Tools)</h2>
+        <div class="viz-box">
+            <p>Analyse de l'œuvre <em>Vingt mille lieues sous les mers</em>. Ce nuage de mots (Cirrus) met en évidence les thèmes centraux : le Capitaine Nemo, le Nautilus et l'environnement marin.</p>
+            <iframe src='https://voyant-tools.org/tool/Cirrus/?corpus=4004c382798b40201779d8a8ea207784'></iframe>
+            <p>Analyse d'un cahier de charge <em>Projet Boite de médicaments</em>.</p>
+            <div class="viz-container">
+                <iframe style='height: 370px;' src='https://voyant-tools.org/tool/Cirrus/?corpus=70d6bc72833117ebacaa014e9f345fd8'></iframe>
+                <iframe style='height: 235px;' src='https://voyant-tools.org/tool/Bubblelines/?query=m%C3%A9dicaments&query=donn%C3%A9es&query=l%E2%80%99application&query=gestion&query=frontend&docId=d479162f33d3aa09d791e281b12a4ed8&corpus=70d6bc72833117ebacaa014e9f345fd8'></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Visualisation interactive d'images (Drag & Hue)</h2>
+        <div class="viz-box">
+            <p>Analyse macroscopique d'une collection d'images utilisant l'outil <strong>Drag & Hue</strong>. Cette approche permet d'explorer visuellement des corpus iconographiques par couleur et propriétés graphiques.</p>
+            <iframe src="https://ereyes.github.io/drag_and_hue/"></iframe>
+        </div>
+    </section>
     </main>
 
    
